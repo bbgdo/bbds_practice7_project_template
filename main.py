@@ -1,8 +1,18 @@
 from app.io.input import input_text, read_from_file, read_with_pandas
 from app.io.output import print_to_console, write_to_file
+from tests.test_io.test_input import (test_read_from_file_exists, test_read_from_file_returns_string,
+                                      test_read_from_file_content, test_read_with_pandas_exists,
+                                      test_read_with_pandas_returns_dataframe)
 
 
 def main():
+    # Tests
+    test_read_from_file_exists()
+    test_read_from_file_returns_string()
+    test_read_from_file_content()
+    test_read_with_pandas_exists()
+    test_read_with_pandas_returns_dataframe()
+
     # Using the console's input and output functions
     text = input_text()
     print_to_console("Entered text:", text)
